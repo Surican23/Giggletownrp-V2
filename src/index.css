@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  /* Histoire colors */
+  --histoire-title-color: rgb(0, 191, 255);
+  --histoire-status-color: rgba(239, 68, 68, 0.95);
+  --histoire-date-color: rgba(2, 132, 199, 0.95);
+  --histoire-intro-color: rgba(17, 24, 39, 0.7);
+  --histoire-desc-color: rgba(17, 24, 39, 0.78);
+
+  
+  /* Histoire timeline colors */
+  --histoire-timeline-gradient: linear-gradient(180deg, rgba(56, 189, 248, 1), rgba(167, 139, 250, 1), rgba(244, 114, 182, 1));
+  --histoire-dot-gradient: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, 0.95), rgba(167, 139, 250, 0.75));
+  --histoire-dot-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+  
+  /* Theme colors */
+  --theme-card-bg: #ffffff;
+  --theme-card-color: #111827;
+  --theme-card-border: none; /*disabled, previously : rgba(0, 191, 255, 0.25)*/
+  --theme-card-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  --theme-panel-bg: rgb(245, 246, 248);
+  --theme-nav-bg: rgba(255, 255, 255, 0.65);
+
+  /* Custom colors for map buttons */
+  --map-overworld-gradient-background: linear-gradient(135deg, rgb(32, 174, 235), rgb(13, 238, 219), rgb(4, 224, 52));
+  --map-overworld-gradient-border: linear-gradient(135deg, rgb(25, 131, 177), rgb(10, 156, 144), rgb(2, 146, 33));
+  --map-overworld-gradient-border-reverse: linear-gradient(315deg, rgb(25, 131, 177), rgb(10, 156, 144), rgb(2, 146, 33));
+  --map-overworld-panel-shadow: 0 0 15px rgba(32, 174, 235, 0.3);
+  --map-cave-gradient-background: linear-gradient(135deg, rgb(150, 172, 182), rgb(102, 97, 121), rgb(44, 33, 33));
+  --map-cave-gradient-border: linear-gradient(135deg, rgb(89, 103, 109), rgb(56, 53, 66), rgb(15, 11, 11));
+  --map-cave-gradient-border-reverse: linear-gradient(315deg, rgb(89, 103, 109), rgb(56, 53, 66), rgb(15, 11, 11));
+  --map-cave-panel-shadow: 0 0 15px rgba(102, 97, 121, 0.3);
+  --map-nether-gradient-background: linear-gradient(135deg, rgb(248, 235, 56), rgb(248, 106, 23), rgb(255, 0, 0));
+  --map-nether-gradient-border: linear-gradient(135deg, rgb(151, 143, 34), rgb(150, 114, 17), rgb(153, 18, 18));
+  --map-nether-gradient-border-reverse: linear-gradient(315deg, rgb(151, 143, 34), rgb(150, 114, 17), rgb(153, 18, 18));
+  --map-nether-panel-shadow: 0 0 15px rgba(248, 188, 23, 0.3);
+  --map-ender-gradient-background: linear-gradient(135deg, rgb(245, 241, 26), rgb(46, 23, 117), rgb(0, 0, 0));
+  --map-ender-gradient-border: linear-gradient(135deg, rgb(156, 154, 23), rgb(20, 10, 51), rgb(9, 1, 20));
+  --map-ender-gradient-border-reverse: linear-gradient(315deg, rgb(156, 154, 23), rgb(13, 1, 49), rgb(9, 1, 20));
+  --map-ender-panel-shadow: 0 0 15px rgba(46, 23, 117, 0.3);
+}
+
+/* Dark mode */
+html.dark {
+  --histoire-title-color: rgb(0, 191, 255);
+  --histoire-status-color: rgba(248, 113, 113, 0.95);
+  --histoire-date-color: rgba(56, 189, 248, 0.95);
+  --histoire-intro-color: rgba(255, 255, 255, 0.75);
+  --histoire-desc-color: rgba(255, 255, 255, 0.78);
+  
+  --theme-card-bg: #1e1e1e;
+  --theme-card-color: rgba(255, 255, 255, 0.85);
+  --theme-card-border: none; /*disabled, previously : rgba(0, 191, 255, 0.2)*/
+  --theme-card-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  --theme-panel-bg: rgba(255, 255, 255, 0.05);
+  --theme-nav-bg: rgba(0, 0, 0, 0.3);
+  
+  --histoire-timeline-gradient: linear-gradient(180deg, rgba(56, 189, 248, 1), rgba(167, 139, 250, 1), rgba(244, 114, 182, 1));
+  --histoire-dot-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  font-weight: bold;
+}
+
+h1  {
+  font-size : 30px;
+}
+
+h2 {
+  font-size : 27px;
+}
+
+h3 {
+  font-size : 22px;
+}
+
+h4 {
+  font-size : 18px;
+}
+
+h5 {
+  font-size : 16px;
+}
+
+h6 {
+  font-size : 13px;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Segoe UI", "Inter", Arial, sans-serif;
+  background: radial-gradient(circle at top, #ffffff, #f3f4f6);
+  color: #111827;
+  text-align: center;
+}
+
+/* Dark mode (Tailwind uses `darkMode: "class"`) */
+html.dark body {
+  background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+  color: white;
+}
+
+
+@keyframes rgbBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 8px rgba(0, 255, 100, 0.6); }
+  50% { box-shadow: 0 0 20px rgba(0, 255, 100, 1); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 8px rgba(255, 60, 60, 0.6); }
+  50% { box-shadow: 0 0 20px rgba(255, 60, 60, 1); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Map panel styles - using background-clip technique for gradient borders with border-radius */
+.map-panel-overworld {
+  background: var(--map-overworld-gradient-border), linear-gradient(135deg, rgba(32, 174, 235, 0.08), rgba(13, 238, 219, 0.08), rgba(4, 224, 52, 0.08)) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  border: 3px solid transparent !important;
+  border-radius: 15px !important;
+  box-shadow: var(--map-overworld-panel-shadow);
+}
+
+.map-panel-cave {
+  background: var(--map-cave-gradient-border), linear-gradient(135deg, rgba(150, 172, 182, 0.08), rgba(102, 97, 121, 0.08), rgba(44, 33, 33, 0.08)) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  border: 3px solid transparent !important;
+  border-radius: 15px !important;
+  box-shadow: var(--map-cave-panel-shadow);
+}
+
+.map-panel-nether {
+  background: var(--map-nether-gradient-border), linear-gradient(135deg, rgba(248, 235, 56, 0.08), rgba(248, 188, 23, 0.08), rgba(248, 24, 24, 0.08)) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  border: 3px solid transparent !important;
+  border-radius: 15px !important;
+  box-shadow: var(--map-nether-panel-shadow);
+}
+
+.map-panel-ender {
+  background: var(--map-ender-gradient-border), linear-gradient(135deg, rgba(245, 241, 26, 0.08), rgba(46, 23, 117, 0.08), rgba(0, 0, 0, 0.08)) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  border: 3px solid transparent !important;
+  border-radius: 15px !important;
+  box-shadow: var(--map-ender-panel-shadow);
+}
+

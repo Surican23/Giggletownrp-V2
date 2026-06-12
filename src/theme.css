@@ -1,0 +1,143 @@
+/* Theme utilities used by the app (light/dark)
+   Note: many components set their own inline background (#1e1e1e). We override with !important.
+   
+   IMPORTANT: Colors are now defined as CSS variables in index.css
+   Modify --histoire-*-color variables there to change colors globally
+   Or add inline style with CSS variable on component to override locally
+*/
+
+.theme-card {
+  background: var(--theme-card-bg) !important;
+  color: var(--theme-card-color) !important;
+  border: 1px solid var(--theme-card-border);
+  box-shadow: var(--theme-card-shadow);
+}
+
+.theme-card h1,
+.theme-card h2,
+.theme-card h3,
+.theme-card h4,
+.theme-card h5,
+.theme-card h6,
+.theme-card strong {
+  color: inherit;
+}
+
+html.dark p,
+html.dark span,
+html.dark label,
+html.dark a,
+html.dark li {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.histoire-desc {
+  color: var(--histoire-desc-color);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Histoire (lisibilité) */
+.histoire-title,
+.histoire-status,
+.histoire-date,
+.histoire-item-title,
+.histoire-intro {
+  margin: 0;
+}
+ 
+.histoire-title {
+  color: var(--histoire-title-color);
+}
+
+.histoire-status {
+  color: var(--histoire-status-color);
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.histoire-intro {
+  color: var(--histoire-intro-color);
+  margin-bottom: 32px;
+}
+
+.histoire-date {
+  color: var(--histoire-date-color);
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.histoire-item-title {
+  font-weight: 800;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+  color: var(--histoire-item-title-color);
+}
+
+.histoire-timeline {
+  background: var(--histoire-timeline-gradient);
+}
+
+.histoire-dot {
+  background: var(--histoire-dot-gradient);
+  box-shadow: var(--histoire-dot-shadow);
+}
+
+
+
+/* Match light-mode behavior: keep links non-underlined */
+html.dark a {
+  text-decoration: none;
+}
+
+
+
+/* Inner light-mode panels for cards */
+.theme-panel {
+  background: var(--theme-panel-bg) !important;
+  border: 1px solid var(--theme-card-border);
+}
+
+/* Nav container background */
+.theme-nav {
+  background: var(--theme-nav-bg) !important;
+}
+
+/*map button - using background-clip technique for gradient borders with border-radius */
+.map-button-overworld {
+  background: var(--map-overworld-gradient-border-reverse), var(--map-overworld-gradient-background);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(32, 174, 235, 0.4);
+}
+
+.map-button-cave {
+  background: var(--map-cave-gradient-border-reverse), var(--map-cave-gradient-background);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(102, 97, 121, 0.4);
+}
+
+.map-button-nether {
+  background: var(--map-nether-gradient-border-reverse), var(--map-nether-gradient-background);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(248, 188, 23, 0.4);
+}
+
+.map-button-ender {
+  background: var(--map-ender-gradient-border-reverse), var(--map-ender-gradient-background);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(46, 23, 117, 0.4);
+}
+
