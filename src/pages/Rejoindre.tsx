@@ -63,7 +63,7 @@ const etapesContent = {
   "Clique sur 'Multijoueur'.",
   "Clique sur 'Ajouter un serveur'.",
   "Nom du serveur : Giggletown RP",
-  "Adresse du serveur : giggletownrp.min3.cloud",
+  "Adresse du serveur : giggletownrp.min3.fr",
   "Clique sur 'Terminé' puis rejoins le serveur.",
   "Bon jeu sur Giggletown RP !"
 ],
@@ -102,7 +102,7 @@ Curseforge: [
   "Clique sur 'Multijoueur'.",
   "Ajoute un serveur.",
   "Nom du serveur : Giggletown RP",
-  "Adresse du serveur : giggletownrp.min3.cloud",
+  "Adresse du serveur : giggletownrp.min3.fr",
   "Clique sur 'Terminé' puis rejoins le serveur.",
   "Bon jeu sur Giggletown RP !"
 ],
@@ -145,7 +145,7 @@ Cracké: [
   "Clique sur 'Multijoueur'.",
   "Ajoute un serveur.",
   "Nom du serveur : Giggletown RP",
-  "Adresse du serveur : giggletownrp.min3.cloud",
+  "Adresse du serveur : giggletownrp.min3.fr",
   "Clique sur 'Terminé' puis rejoins le serveur.",
   "Bon jeu sur Giggletown RP !"
 ],
@@ -206,7 +206,7 @@ export default function Rejoindre() {
         }} className="theme-panel">
           {[
             { label: "Version", value: "Minecraft Java 1.20.1" },
-            { label: "IP", value: "giggletownrp.min3.cloud" },
+            { label: "IP", value: "giggletownrp.min3.fr" },
             { label: "Port", value: "20033" },
             { label: "Client", value: "Forge" },
           ].map(({ label, value }) => (
