@@ -70,7 +70,7 @@ useEffect(() => {
         }}>
           {[
             { title: "Version", value: "Minecraft Java 1.20.1" },
-            { title: "IP du serveur", value: "giggletownrp.min3.cloud" },
+            { title: "IP du serveur", value: "giggletownrp.min3.fr" },
             { title: "Client", value: "Forge" },
             { title: "Type", value: "Serveur RP moddé" },
           ].map((item) => (
