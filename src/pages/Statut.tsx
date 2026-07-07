@@ -11,7 +11,7 @@ interface ServerStatus {
 }
 
 const SERVER_IP = "nd2.hn21.xyz:20033";
-const SERVER_DISPLAY = "giggletownrp.min3.cloud";
+const SERVER_DISPLAY = "giggletownrp.min3.fr";
 const C = "#00bfff";
 
 function StatCard({
