@@ -35,7 +35,7 @@ const contacts = [
     title: "Serveur Minecraft",
     desc: "Connecte-toi directement sur notre serveur Minecraft Java.",
     link: null,
-    linkLabel: "giggletownrp.min3.cloud",
+    linkLabel: "giggletownrp.min3.fr",
   },
 ];
 
